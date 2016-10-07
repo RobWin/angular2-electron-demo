@@ -10,15 +10,13 @@
     "electron"
   ],
   "scripts": {
-    "watch": "npm run watch:dev",
-    "watch:dev": "webpack --watch --progress --profile --colors --display-error-details --display-cached",
     "typings-install": "typings install",
     "postinstall": "npm run typings-install",
     "build": "rimraf dist && webpack --inline --colors --progress --display-error-details --display-cached",
     "build:prod": "webpack --progress --profile --colors --display-error-details --display-cached --optimize-occurence-order --optimize-dedupe",
     "build:dist": "npm run build:prod && npm run electron .",
-    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3333  --content-base src/app",
-    "electron": "npm run build && electron .",
+    "start": "npm run build & webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3333  --content-base dist",
+    "electron": "electron .",
     "package": "./node_modules/electron-packager/cli.js src App --platform=win32 --arch=all --out=dist --overwrite --version='1.2.5'",
     "pack-linux": "electron-packager . --asar --asar-unpack=protocol-link.html --overwrite --platform=linux --arch=x64 --prune=true --out=out",
     "test": "mocha tests"
