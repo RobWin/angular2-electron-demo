@@ -1,18 +1,6 @@
-## angular-2-electron
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
-
-## Installation
-
-```bash
-$ npm install
-$ npm run electron
-```
-
-## License
-
 The MIT License (MIT)
 
-Copyright (c) 2016 Robert Winkler
+Copyright (c) 2016 Robert Winkler <rwinkler@telekom.de>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
